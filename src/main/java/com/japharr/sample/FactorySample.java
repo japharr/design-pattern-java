@@ -1,8 +1,8 @@
 package com.japharr.sample;
 
-public class AbstractFactorySample {
+public class FactorySample {
     public static void main(String[] args) {
-        AnimalFactory animalFactory = new AnimalFactory();
+        AnimalFactory animalFactory = new AnimalFactoryImpl();
         Animal cat = animalFactory.instance("Cat");
         cat.walk();
         Animal dog = animalFactory.instance("Dog");
@@ -37,7 +37,12 @@ class Goat implements Animal {
     }
 }
 
-class AnimalFactory {
+abstract class AnimalFactory {
+    public abstract Animal instance(String type);
+}
+
+class AnimalFactoryImpl extends AnimalFactory {
+    @Override
     public Animal instance(String type) {
         if(type == null) return null;
 
