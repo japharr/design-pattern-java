@@ -1,4 +1,4 @@
-package com.japharr.sample.singleton;
+package com.japharr.sample.singleton.laxy;
 
 public class Singleton {
     private static Singleton instance = null;

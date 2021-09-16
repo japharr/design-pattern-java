@@ -1,4 +1,4 @@
-package com.japharr.sample.singleton;
+package com.japharr.sample.singleton.laxy;
 
 public class SingletonTest {
     public static void main(String[] args) {
