@@ -1,4 +1,4 @@
-package com.japharr.sample;
+package com.japharr.sample.factory;
 
 public class AbstractFactorySample {
     public static void main(String[] args) {
