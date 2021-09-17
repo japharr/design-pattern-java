@@ -70,12 +70,12 @@ abstract class AbstractFactory {
 class ShapeFactory extends AbstractFactory {
     @Override
     public Shape getShape(String type) {
-        return switch (type) {
-            case "circle" -> new Circle();
-            case "rectangle" -> new Rectangle();
-            case "square" -> new Square();
-            default -> null;
-        };
+         switch (type) {
+             case "circle": return new Circle();
+            case "rectangle": return new Rectangle();
+            case "square": return new Square();
+            default: return null;
+        }
     }
 
     @Override
@@ -87,12 +87,12 @@ class ShapeFactory extends AbstractFactory {
 class ColorFactory extends AbstractFactory {
     @Override
     public Color getColor(String type) {
-        return switch (type) {
-            case "red" -> new Red();
-            case "blue" -> new Blue();
-            case "green" -> new Green();
-            default -> null;
-        };
+        switch (type) {
+            case "red": return new Red();
+            case "blue": return new Blue();
+            case "green": return new Green();
+            default: return null;
+        }
     }
 
     @Override
